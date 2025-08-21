@@ -30,6 +30,7 @@ function About() {
                                 <Image
                                     src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                                     alt="Gym Equipment" 
+                                    fill
                                     className="w-full h-96 object-cover rounded-xl"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-xl"></div>

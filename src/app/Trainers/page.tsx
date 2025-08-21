@@ -118,6 +118,7 @@ function Page() {
                                     <Image
                                         src={trainer.image} 
                                         alt={trainer.name}
+                                        fill
                                         className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>

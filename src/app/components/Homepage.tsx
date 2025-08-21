@@ -10,6 +10,7 @@ function Homepage() {
                     <Image
                         src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                         alt="Premium Gym Interior"
+                        fill
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-70"></div>
@@ -124,6 +125,7 @@ function Homepage() {
                             <Image
                                 src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                                 alt="Weight Training Area"
+                                fill
                                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -138,6 +140,7 @@ function Homepage() {
                             <Image
                                 src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                                 alt="Cardio Area"
+                                fill
                                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -152,6 +155,7 @@ function Homepage() {
                             <Image
                                 src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                                 alt="Group Classes"
+                                fill
                                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -166,6 +170,7 @@ function Homepage() {
                             <Image
                                 src="https://images.unsplash.com/photo-1576678927484-cc907957088c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                                 alt="Swimming Pool"
+                                fill
                                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
