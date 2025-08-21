@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Image from 'next/image'
 function Homepage() {
     return (
         <div className="min-h-screen bg-black">
@@ -7,7 +7,7 @@ function Homepage() {
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
                 {/* Background Image with Overlay */}
                 <div className="absolute inset-0 z-0">
-                    <img
+                    <Image
                         src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                         alt="Premium Gym Interior"
                         className="w-full h-full object-cover"
@@ -75,7 +75,7 @@ function Homepage() {
                             </div>
                             <h3 className="text-2xl font-bold text-white mb-4 text-center">STATE-OF-THE-ART EQUIPMENT</h3>
                             <p className="text-gray-400 text-center leading-relaxed">
-                                Premium machines and free weights from the world's leading manufacturers, maintained to perfection.
+                                Premium machines and free weights from the best leading manufacturers, maintained to perfection.
                             </p>
                         </div>
 
@@ -121,7 +121,7 @@ function Homepage() {
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Facility 1 */}
                         <div className="relative group overflow-hidden rounded-xl">
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                                 alt="Weight Training Area"
                                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
@@ -135,7 +135,7 @@ function Homepage() {
 
                         {/* Facility 2 */}
                         <div className="relative group overflow-hidden rounded-xl">
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                                 alt="Cardio Area"
                                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
@@ -149,7 +149,7 @@ function Homepage() {
 
                         {/* Facility 3 */}
                         <div className="relative group overflow-hidden rounded-xl">
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                                 alt="Group Classes"
                                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
@@ -163,7 +163,7 @@ function Homepage() {
 
                         {/* Facility 4 */}
                         <div className="relative group overflow-hidden rounded-xl">
-                            <img
+                            <Image
                                 src="https://images.unsplash.com/photo-1576678927484-cc907957088c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
                                 alt="Swimming Pool"
                                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"

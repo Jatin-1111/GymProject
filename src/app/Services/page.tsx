@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 function Page() {
     const services = [
@@ -213,7 +214,7 @@ function Page() {
                             >
                                 {/* Equipment Image */}
                                 <div className="relative h-64 overflow-hidden">
-                                    <img 
+                                    <Image
                                         src={item.image} 
                                         alt={item.name}
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

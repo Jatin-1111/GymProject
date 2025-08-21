@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 function About() {
     return (
@@ -26,7 +27,7 @@ function About() {
                         {/* Left Side - Motivational Content */}
                         <div>
                             <div className="relative">
-                                <img 
+                                <Image
                                     src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                                     alt="Gym Equipment" 
                                     className="w-full h-96 object-cover rounded-xl"
@@ -34,8 +35,8 @@ function About() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-xl"></div>
                                 <div className="absolute bottom-8 left-8 right-8">
                                     <h3 className="text-4xl font-bold text-white mb-4">
-                                        "BECOME STRONGER<br/>
-                                        <span className="text-red-500">IS YOUR CHOICE"</span>
+                                        BECOME STRONGER<br/>
+                                        <span className="text-red-500">IS YOUR CHOICE</span>
                                     </h3>
                                 </div>
                             </div>
@@ -47,10 +48,10 @@ function About() {
                                 WHERE CHAMPIONS <span className="text-red-500">ARE FORGED</span>
                             </h2>
                             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                                At Armour Zone Elite, we don't just build bodies - we forge champions. Our state-of-the-art facility combines cutting-edge equipment with expert guidance to help you achieve extraordinary results.
+                                At Armour Zone Elite, we do not just build bodies - we forge champions. Our state-of-the-art facility combines cutting-edge equipment with expert guidance to help you achieve extraordinary results.
                             </p>
                             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                                Whether you're a beginner taking your first steps or an athlete pushing your limits, our premium environment and professional trainers ensure every goal becomes reality.
+                                Whether you are a beginner taking your first steps or an athlete pushing your limits, our premium environment and professional trainers ensure every goal becomes reality.
                             </p>
                             <div className="flex items-center space-x-4">
                                 <div className="w-16 h-1 bg-red-500"></div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 function Page() {
     const trainers = [
@@ -85,7 +86,7 @@ function Page() {
                         <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
                             At Armour Zone, our certified trainers are the backbone of your fitness journey. Each trainer brings years of specialized experience, 
                             professional certifications, and a deep passion for helping you achieve your goals. They combine scientific training methods with 
-                            personalized attention, ensuring every member receives expert guidance tailored to their unique needs. Our trainers don't just count reps – 
+                            personalized attention, ensuring every member receives expert guidance tailored to their unique needs. Our trainers do not just count reps – 
                             they inspire, motivate, and transform lives through dedicated mentorship and proven results.
                         </p>
                     </div>
@@ -114,7 +115,7 @@ function Page() {
                             >
                                 {/* Trainer Image */}
                                 <div className="relative mb-6 overflow-hidden rounded-lg">
-                                    <img 
+                                    <Image
                                         src={trainer.image} 
                                         alt={trainer.name}
                                         className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
