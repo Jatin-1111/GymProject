@@ -99,8 +99,9 @@ const Navbar = () => {
           </div>
 
           {/* Right Section - Desktop Login Button */}
-          <button className="hidden md:flex items-center space-x-2 bg-red-700 hover:bg-red-800 text-white hover:text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 border border-red-700 hover:border-red-800">
-            {/* <LogIn className="w-5 h-5" /> */}
+          <button className="hidden md:flex items-center space-x-2 bg-red-700 hover:bg-red-800 text-white hover:text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 border border-red-700 hover:border-red-800"
+          onClick={() => {router.push("https://gym-delta-wine.vercel.app")}}>
+        
             <span>Login/Sign-in</span>
           </button>
 
