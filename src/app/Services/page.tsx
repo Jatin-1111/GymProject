@@ -1,7 +1,10 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation';
 
 function Page() {
+    const router = useRouter();
     const services = [
         {
             id: 1,
@@ -270,7 +273,8 @@ function Page() {
                                         </div>
                                     </div>
 
-                                    <button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                                    <button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                                    onClick={() => {router.push("./Contact")}}>
                                         BOOK TRAINING SESSION
                                     </button>
                                 </div>
@@ -345,10 +349,12 @@ function Page() {
                         Book a tour today and discover why Armour Zone is the premier destination for serious fitness enthusiasts.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                        <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                        onClick={() => {router.push("./Contact")}}>
                             BOOK FACILITY TOUR
                         </button>
-                        <button className="border-2 border-gray-500 text-gray-300 hover:border-red-500 hover:text-red-500 px-10 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                        <button className="border-2 border-gray-500 text-gray-300 hover:border-red-500 hover:text-red-500 px-10 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                        onClick={() => {router.push("./Contact")}}>
                             VIEW EQUIPMENT LIST
                         </button>
                     </div>

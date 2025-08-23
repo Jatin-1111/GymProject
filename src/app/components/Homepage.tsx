@@ -1,6 +1,9 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation';
 function Homepage() {
+    const router = useRouter();
     return (
         <div className="min-h-screen bg-black">
             {/* Hero Section */}
@@ -35,7 +38,8 @@ function Homepage() {
                         Join the most prestigious fitness destination where champions are made and limits are broken.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center align-items-center">
-                        <button className="bg-red-500 hover:bg-red-800 text-black hover:text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl  border-black hover:border-black">
+                        <button className="bg-red-500 hover:bg-red-800 text-black hover:text-black px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl  border-black hover:border-black"
+                        onClick={() => {router.push("./Contact")}}>
                             START YOUR JOURNEY
                         </button>
                         {/* <button className="bg-red-900 hover:bg-red-800 text-black hover:text-black px-6 py-2 rounded-lg font-semibold transition-all duration-300 border border-black hover:border-black">
@@ -220,10 +224,12 @@ function Homepage() {
                         Join thousands of members who have already transformed their lives. Your journey starts today.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                        <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                        onClick={() => {router.push("./Contact")}}>
                             JOIN NOW
                         </button>
-                        <button className="border-2 border-gray-500 text-gray-300 hover:border-white hover:text-white px-10 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                        <button className="border-2 border-gray-500 text-gray-300 hover:border-white hover:text-white px-10 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                        onClick={() => {router.push("./Contact")}}>
                             FREE TRIAL
                         </button>
                     </div>
@@ -234,3 +240,17 @@ function Homepage() {
 }
 
 export default Homepage
+
+// 'use client'
+// import React from 'react'
+// import Image from 'next/image'
+// import HeroSection from './HeroSection'
+// function Homepage() {
+//     return (
+//         <div>
+//             <HeroSection />
+//         </div>
+//     )
+// }
+
+// export default Homepage;

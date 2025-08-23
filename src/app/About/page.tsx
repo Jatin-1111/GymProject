@@ -1,7 +1,9 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
-
+import { useRouter } from 'next/navigation'
 function About() {
+    const router = useRouter();
     return (
         <div className="min-h-screen bg-black">
             {/* Hero About Section */}
@@ -26,17 +28,18 @@ function About() {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         {/* Left Side - Motivational Content */}
                         <div>
-                            <div className="relative">
+                            <div className="relative h-96 rounded-xl overflow-hidden">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                                    alt="Gym Equipment" 
+                                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                                    alt="Gym Equipment"
                                     fill
-                                    className="w-full h-96 object-cover rounded-xl"
+                                    className="object-cover"
+                                    unoptimized
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-xl"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
                                 <div className="absolute bottom-8 left-8 right-8">
                                     <h3 className="text-4xl font-bold text-white mb-4">
-                                        BECOME STRONGER<br/>
+                                        BECOME STRONGER<br />
                                         <span className="text-red-500">IS YOUR CHOICE</span>
                                     </h3>
                                 </div>
@@ -87,7 +90,7 @@ function About() {
                             </div>
                             <div className="flex items-center mb-6">
                                 <svg className="w-8 h-8 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.84L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.84l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.84L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.84l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                                 </svg>
                                 <h3 className="text-2xl font-bold text-white">3 MONTHS</h3>
                             </div>
@@ -112,7 +115,7 @@ function About() {
                             </div>
                             <div className="flex items-center mb-6">
                                 <svg className="w-8 h-8 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                                 <h3 className="text-2xl font-bold text-white">6 MONTHS</h3>
                             </div>
@@ -138,7 +141,7 @@ function About() {
                             </div>
                             <div className="flex items-center mb-6">
                                 <svg className="w-8 h-8 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                                    <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                                 </svg>
                                 <h3 className="text-2xl font-bold text-white">12 MONTHS</h3>
                             </div>
@@ -173,7 +176,7 @@ function About() {
                                 </h3>
                                 <div className="w-20 h-1 bg-red-500 mx-auto"></div>
                             </div>
-                            
+
                             <div className="bg-red-600 p-6 rounded-lg text-center mb-6 transform hover:scale-105 transition-all duration-300">
                                 <div className="text-3xl font-bold text-white mb-2">
                                     5:30 AM - 10:00 PM
@@ -215,9 +218,9 @@ function About() {
                                     <div>
                                         <h4 className="text-xl font-bold text-red-500 mb-2">ARMOUR ZONE Elite</h4>
                                         <p className="text-gray-300 leading-relaxed">
-                                            Second Floor, SSL Tower, Ambala - Chandigarh Expy,<br/>
-                                            above Reliance Smartpoint, Shakti Nagar,<br/>
-                                            Bhagat Singh Nagar, Chandigarh,<br/>
+                                            Second Floor, SSL Tower, Ambala - Chandigarh Expy,<br />
+                                            above Reliance Smartpoint, Shakti Nagar,<br />
+                                            Bhagat Singh Nagar, Chandigarh,<br />
                                             Dera Bassi, Punjab 140507
                                         </p>
                                     </div>
@@ -253,10 +256,12 @@ function About() {
                         Join the Armour Zone family and experience the difference that premium training makes.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                        <button className="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                            onClick={() => { router.push("./Contact") }}>
                             JOIN TODAY
                         </button>
-                        <button className="border-2 border-gray-500 text-gray-300 hover:border-red-500 hover:text-red-500 px-10 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                        <button className="border-2 border-gray-500 text-gray-300 hover:border-red-500 hover:text-red-500 px-10 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                            onClick={() => { router.push("./Contact") }}>
                             BOOK VISIT
                         </button>
                     </div>
