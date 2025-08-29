@@ -1,72 +1,14 @@
-/* @import "tailwindcss";
-
-html,
-body {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-#__next {
-  background-color: #000000;
-  min-height: 100vh;
-}
-
-:root {
-  --font-century-gothic: "Century Gothic", "AppleGothic", sans-serif;
-}
-
-.font-american {
-  font-family: var(--font-century-gothic);
-} */
-
-/* @import "tailwindcss";
-
-html,
-body {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-#__next {
-  background-color: #000000;
-  min-height: 100vh;
-}
-
-.font-american {
-  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif !important;
-} */
-
-/* @import "tailwindcss";
-
-html,
-body {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-#__next {
-  background-color: #000000;
-  min-height: 100vh;
-} */
-
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Creepster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Creepster&family=Nosifer&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html,
 body {
   background-color: #000000;
   color: #ffffff;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {

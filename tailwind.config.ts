@@ -9,7 +9,7 @@ export default {
     extend: {
       fontFamily: {
         american: ['var(--font-poppins)', 'sans-serif'],
-        poppins: ['var(--font-poppins)', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
