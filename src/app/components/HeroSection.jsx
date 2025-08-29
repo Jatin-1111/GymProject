@@ -184,52 +184,22 @@
 
 // export default Hero3DSection;
 
-import React from 'react';
-import Image from 'next/image';
-
-const HeroSection =  () => {
-  return (
-    <section className="h-screen mt-5 w-full flex items-center justify-center bg-black">
-      <div className="absolute mt-[] left-1/2 transform -translate-x-1/2 z-30">
-        <Image
-          src="/flex1_bg.png" // Replace with your actual image path
-          alt="Background Image"
-          width={800} // Adjust width as needed
-          height={600} // Adjust height as needed
-          className="object-contain mt-[100px]"
-        />
-      </div>
-      <div className="text-center">
-        <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] xl:text-[14rem] font-black text-red-500 tracking-wider uppercase font-sans">
-          ARMOUR ZONE
-        </h1>
-      </div>
-    </section>
-  );
-};
-
-export default HeroSection;
-
-// components/HeroSection.tsx
 // import React from 'react';
 // import Image from 'next/image';
 
-// const HeroSection = () => {
+// const HeroSection =  () => {
 //   return (
-//     <section className="h-screen w-full flex items-center justify-center bg-black relative">
-//       {/* Background Image */}
-//       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-30">
+//     <section className="h-screen mt-5 w-full flex items-center justify-center bg-black">
+//       <div className="absolute mt-[] left-1/2 transform -translate-x-1/2 z-30">
 //         <Image
 //           src="/flex1_bg.png" // Replace with your actual image path
 //           alt="Background Image"
 //           width={800} // Adjust width as needed
 //           height={600} // Adjust height as needed
-//           className="object-contain mt-[30px]"
+//           className="object-contain mt-[100px]"
 //         />
 //       </div>
-      
-//       {/* Text Content - keeping original styling */}
-//       <div className="text-center relative z-20">
+//       <div className="text-center">
 //         <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] xl:text-[14rem] font-black text-red-500 tracking-wider uppercase font-sans">
 //           ARMOUR ZONE
 //         </h1>
@@ -239,3 +209,35 @@ export default HeroSection;
 // };
 
 // export default HeroSection;
+
+import React from 'react';
+import Image from 'next/image';
+
+const HeroSection = () => {
+  return (
+    <section className="h-screen mt-5 w-full flex items-center justify-center bg-black relative overflow-hidden">
+      {/* Diagonal gradient overlay - right to left */}
+      <div className="absolute inset-0 bg-gradient-to-bl from-red-900/40 via-red-800/20 to-transparent z-10"></div>
+      
+      {/* Background Image */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 z-50">
+        <Image
+          src="/flex1_bg.png" // Replace with your actual image path
+          alt="Background Image"
+          width={800} // Adjust width as needed
+          height={600} // Adjust height as needed
+          className="object-contain mt-[100px]"
+        />
+      </div>
+      
+      {/* Main Text */}
+      <div className="text-center relative z-30">
+        <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] xl:text-[14rem] font-black text-red-900/80 tracking-wider uppercase font-sans drop-shadow-2xl">
+          ARMOUR ZONE
+        </h1>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
