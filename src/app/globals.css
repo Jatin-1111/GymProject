@@ -1,3 +1,66 @@
+/* @import "tailwindcss";
+
+html,
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#__next {
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+:root {
+  --font-century-gothic: "Century Gothic", "AppleGothic", sans-serif;
+}
+
+.font-american {
+  font-family: var(--font-century-gothic);
+} */
+
+/* @import "tailwindcss";
+
+html,
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#__next {
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.font-american {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif !important;
+} */
+
+/* @import "tailwindcss";
+
+html,
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#__next {
+  background-color: #000000;
+  min-height: 100vh;
+} */
+
 @import "tailwindcss";
 
 html,
@@ -6,17 +69,11 @@ body {
   color: #ffffff;
 }
 
-body {
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+html {
+  scroll-behavior: smooth;
 }
 
 #__next {
   background-color: #000000;
   min-height: 100vh;
 }
-
-/* Reset and base styles */

@@ -11,7 +11,7 @@ function About() {
                 <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-transparent"></div>
                 <div className="max-w-7xl mx-auto px-4 relative z-10">
                     <div className="text-center mb-16">
-                        <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">
+                        <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 font-american">
                             ABOUT <span className="text-red-500">ARMOUR ZONE</span>
                         </h1>
                         <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
