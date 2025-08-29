@@ -174,10 +174,10 @@ import { useRouter } from 'next/navigation'
 function About() {
     const router = useRouter();
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-red-900/30">
+        <div className="min-h-screen bg-black">
             {/* Hero About Section */}
             <section className="relative py-10 sm:py-16 lg:py-20 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-black"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="text-center">
                         <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl mt-20 text-white sm:mb-6 font-semibold leading-tight !mb-0">
