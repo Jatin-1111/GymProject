@@ -63,7 +63,7 @@ const HeroSection = () => {
       {/* ----------------- Mobile Layout ----------------- */}
       <div className="flex md:hidden w-full h-full items-center justify-between relative min-h-screen">
         {/* Left Side - ARMOUR vertically */}
-        <div className="flex flex-col items-center justify-center space-y-1 text-red-900/90 text-6xl font-[Almendra] font-black z-30 pl-2">
+        <div className="flex flex-col items-center justify-center space-y-1 text-red-900/90 text-7xl font-[Almendra] font-black z-30 pl-2">
           {"ARMOUR".split("").map((char, index) => (
             <span key={index} className="drop-shadow-lg">{char}</span>
           ))}
@@ -87,7 +87,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right Side - ZONE vertically */}
-        <div className="flex flex-col items-center justify-center space-y-1 text-red-900/90 text-6xl font-[Almendra] font-black z-30 pr-2">
+        <div className="flex flex-col items-center justify-center space-y-1 text-red-900/90 text-7xl font-[Almendra] font-black z-30 pr-2">
           {"ZONE".split("").map((char, index) => (
             <span key={index} className="drop-shadow-lg">{char}</span>
           ))}
