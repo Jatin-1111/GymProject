@@ -247,7 +247,7 @@ function About() {
                             2ND <span className="text-red-500">ANNIVERSARY</span>
                         </h2>
                         <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-red-500 mb-2 sm:mb-4">
-                            OFFERS (TILL 15TH JUNE)
+                            OFFERS (TILL 15TH September)
                         </div>
                         <p className="text-base sm:text-lg lg:text-xl text-gray-300 px-2">
                             Celebrate with us and get exclusive membership deals!

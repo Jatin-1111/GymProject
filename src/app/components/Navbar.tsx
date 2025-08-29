@@ -310,7 +310,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <a 
-                    href="https://gym-delta-wine.vercel.app" 
+                    href="https://gym-frontend-taupe.vercel.app" 
                     className="hover:text-red-500 text-gray-300 transition duration-200 flex items-center space-x-2"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -323,7 +323,7 @@ const Navbar = () => {
 
             {/* Right Section - Desktop Login Button */}
             <a 
-              href="https://gym-delta-wine.vercel.app"
+              href="https://gym-frontend-taupe.vercel.app/auth"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center space-x-2 bg-red-700 hover:bg-red-800 text-white hover:text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 border border-red-700 hover:border-red-800"
@@ -445,7 +445,7 @@ const Navbar = () => {
             </li>
             <li>
               <a 
-                href="https://gym-delta-wine.vercel.app" 
+                href="https://gym-frontend-taupe.vercel.app/auth" 
                 className="block flex items-center space-x-3 text-white hover:text-red-500 transition duration-200 py-3 px-4 rounded-lg hover:bg-gray-800"
                 target="_blank"
                 rel="noopener noreferrer"
