@@ -112,7 +112,7 @@ const Footer = () => {
                 <span className="text-white font-bold text-xl">💪</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">FITNESS POWER</h3>
+                <h3 className="text-xl font-bold text-white">ARMOUR ZONE</h3>
                 <p className="text-red-500 text-sm font-medium">GYM & FITNESS</p>
               </div>
             </div>

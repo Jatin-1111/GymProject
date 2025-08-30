@@ -78,7 +78,7 @@ function About() {
                 <div className="absolute inset-0 bg-black"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-                        <h2 className="text-3xl sm:text-4xl font-[Almendra] md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+                        <h2 className="text-3xl sm:text-4xl font-[Almendra] md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                             2ND <span className="text-red-500 font-[Almendra]">ANNIVERSARY</span>
                         </h2>
                         <div className="text-xl font-[Almendra] sm:text-2xl lg:text-3xl font-bold text-red-500 mb-2 sm:mb-4">
