@@ -207,17 +207,6 @@ export default function LoginPage() {
                 "Sign In"
               )}
             </button>
-
-            {/* Demo Credentials */}
-            <div className="bg-blue-500/20 border border-blue-500/50 text-blue-200 p-3 rounded-lg text-sm">
-              <p className="font-semibold mb-1">Demo Credentials:</p>
-              <p>Email: test@example.com</p>
-              <p>Password: password123</p>
-              <p className="text-xs mt-1 opacity-80">
-                Note: Real API integration - register first or use existing
-                account
-              </p>
-            </div>
           </form>
 
           {/* Sign Up Link */}
