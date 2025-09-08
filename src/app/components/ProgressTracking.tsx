@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { TrendingUp, Scale, Ruler, Plus, BarChart3 } from "lucide-react";
-import apiService from "../services/apiService";
+import apiService from "../Services/apiService";
 
 interface WeightEntry {
   weight_kg: number; // ✅ Weight in kg

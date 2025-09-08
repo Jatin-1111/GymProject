@@ -10,7 +10,7 @@ import {
   Weight,
   RotateCcw,
 } from "lucide-react";
-import apiService from "../services/apiService";
+import apiService from "../Services/apiService";
 
 interface WorkoutEntry {
   id: number;

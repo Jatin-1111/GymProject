@@ -16,7 +16,7 @@ import {
   Moon,
   Heart,
 } from "lucide-react";
-import apiService from "../services/apiService";
+import apiService from "../Services/apiService";
 
 interface UserProfile {
   id: number;

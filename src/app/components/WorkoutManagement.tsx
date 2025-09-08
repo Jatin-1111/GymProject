@@ -14,7 +14,7 @@ import {
   X,
   Zap,
 } from "lucide-react";
-import apiService from "../services/apiService";
+import apiService from "../Services/apiService";
 
 interface WorkoutLog {
   name: string; // ✅ Workout session name

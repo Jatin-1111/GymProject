@@ -14,7 +14,7 @@ import {
   ArrowLeft,
   Calendar,
 } from "lucide-react";
-import apiService from "../services/apiService";
+import apiService from "../Services/apiService";
 import apiUtils from "../utils/apiUtils";
 
 export default function RegisterPage() {

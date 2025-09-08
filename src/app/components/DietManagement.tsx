@@ -10,7 +10,7 @@ import {
   Utensils,
   Target,
 } from "lucide-react";
-import apiService from "../services/apiService";
+import apiService from "../Services/apiService";
 
 interface DietLog {
   meal_name: string;

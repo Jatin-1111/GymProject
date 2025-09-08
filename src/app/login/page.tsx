@@ -8,7 +8,7 @@ import { z } from "zod";
 import Image from "next/image";
 import Link from "next/link";
 import { Eye, EyeOff, Lock, Mail, ArrowLeft } from "lucide-react";
-import apiService from "../services/apiService";
+import apiService from "../Services/apiService";
 
 // Validation schema
 const loginSchema = z.object({

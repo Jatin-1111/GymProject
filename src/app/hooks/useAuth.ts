@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import apiService from "../services/apiService";
+import apiService from "../Services/apiService";
 
 export function useAuth() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

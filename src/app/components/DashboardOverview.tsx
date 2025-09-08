@@ -1,14 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  Activity,
-  Target,
-  TrendingUp,
-  Zap,
-  Award,
-} from "lucide-react";
-import apiService from "../services/apiService";
+import { Activity, Target, TrendingUp, Zap, Award } from "lucide-react";
+import apiService from "../Services/apiService";
 
 interface WeightEntry {
   id: number;
@@ -71,17 +65,17 @@ export default function DashboardOverview() {
         setStats((prev) => ({ ...prev, totalWorkouts: workouts.length }));
       }
 
-        // Process weight data
-        if (weightHistory.status === "fulfilled") {
-          const weights = weightHistory.value || [];
-          setWeightProgress(weights.slice(-10)); // Get last 10 weight entries
-          if (weights.length > 0) {
-            setStats((prev) => ({
-              ...prev,
-              currentWeight: weights[weights.length - 1].weight_kg,
-            }));
-          }
-        }      // Process diet data
+      // Process weight data
+      if (weightHistory.status === "fulfilled") {
+        const weights = weightHistory.value || [];
+        setWeightProgress(weights.slice(-10)); // Get last 10 weight entries
+        if (weights.length > 0) {
+          setStats((prev) => ({
+            ...prev,
+            currentWeight: weights[weights.length - 1].weight_kg,
+          }));
+        }
+      } // Process diet data
       if (dietLogs.status === "fulfilled") {
         const meals = dietLogs.value || [];
         setRecentMeals(meals.slice(0, 5)); // Get last 5 meals
@@ -228,11 +222,9 @@ export default function DashboardOverview() {
                   className="flex items-center justify-between p-3 bg-gray-700 rounded-lg"
                 >
                   <div>
-                    <p className="text-white font-medium">
-                      {workout.name}
-                    </p>
+                    <p className="text-white font-medium">{workout.name}</p>
                     <p className="text-gray-400 text-sm">
-                      {workout.exercises && workout.exercises.length > 0 
+                      {workout.exercises && workout.exercises.length > 0
                         ? `${workout.exercises.length} exercises`
                         : "No exercises logged"}
                     </p>
@@ -270,7 +262,9 @@ export default function DashboardOverview() {
                   className="flex items-center justify-between p-3 bg-gray-700 rounded-lg"
                 >
                   <div>
-                    <p className="text-white font-medium">{entry.weight_kg} kg</p>
+                    <p className="text-white font-medium">
+                      {entry.weight_kg} kg
+                    </p>
                     <p className="text-gray-400 text-sm">Weight Entry</p>
                   </div>
                   <span className="text-gray-400 text-sm">
