@@ -26,14 +26,14 @@ export default function RegisterPage() {
     lastName: "",
     phone: "",
     dateOfBirth: "",
-    gender: "Male",
+    gender: "",
     height: "",
     weight: "",
-    fitnessGoals: "I want to lose weight and get fit",
-    workoutsPerWeek: "3-4",
-    workoutDuration: "60",
-    sleepHours: "7-8",
-    stressLevel: "medium",
+    fitnessGoals: "",
+    workoutsPerWeek: "",
+    workoutDuration: "",
+    sleepHours: "",
+    stressLevel: "",
     dislikedFoods: "",
     allergies: "",
     healthConditions: "",
@@ -51,6 +51,31 @@ export default function RegisterPage() {
     setError("");
     setSuccess("");
 
+    // Basic form validation
+    if (!formData.email) {
+      setError("Email is required.");
+      setIsLoading(false);
+      return;
+    }
+
+    if (!formData.firstName || !formData.lastName) {
+      setError("First and last name are required.");
+      setIsLoading(false);
+      return;
+    }
+
+    if (!formData.dateOfBirth) {
+      setError("Date of birth is required.");
+      setIsLoading(false);
+      return;
+    }
+
+    if (!formData.height || !formData.weight) {
+      setError("Height and weight are required.");
+      setIsLoading(false);
+      return;
+    }
+
     // Validate password match
     if (formData.password !== formData.confirmPassword) {
       setError("Passwords do not match.");
@@ -60,6 +85,7 @@ export default function RegisterPage() {
 
     try {
       const registrationData = apiUtils.transformRegistrationData(formData);
+      console.log("Registration data:", registrationData); // Debug log
 
       // Validate the data
       const validation = apiUtils.validateRegistrationData(registrationData);
@@ -70,14 +96,21 @@ export default function RegisterPage() {
       }
 
       const response = await apiService.register(registrationData);
+      console.log("Registration response:", response); // Debug log
 
-      if (response.message && response.message.includes("successfully")) {
+      if (
+        response.message &&
+        (response.message.includes("successfully") ||
+          response.message.includes("Demo Mode"))
+      ) {
         setSuccess(
           "Registration successful! You can now login with your credentials."
         );
         setTimeout(() => {
           router.push("/login");
         }, 2000);
+      } else {
+        setError("Registration failed. Please try again.");
       }
     } catch (error: unknown) {
       console.error("Registration error:", error);
@@ -365,6 +398,9 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-red-500 focus:bg-white/20 transition-all"
                 >
+                  <option value="" className="bg-gray-800">
+                    Select Gender
+                  </option>
                   <option value="Male" className="bg-gray-800">
                     Male
                   </option>
@@ -440,6 +476,9 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-red-500 focus:bg-white/20 transition-all"
                 >
+                  <option value="" className="bg-gray-800">
+                    Select frequency
+                  </option>
                   <option value="1-2" className="bg-gray-800">
                     1-2 times
                   </option>
@@ -506,6 +545,9 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-red-500 focus:bg-white/20 transition-all"
                 >
+                  <option value="" className="bg-gray-800">
+                    Select sleep hours
+                  </option>
                   <option value="4-5" className="bg-gray-800">
                     4-5 hours
                   </option>
@@ -562,6 +604,9 @@ export default function RegisterPage() {
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-red-500 focus:bg-white/20 transition-all"
                 >
+                  <option value="" className="bg-gray-800">
+                    Select stress level
+                  </option>
                   <option value="low" className="bg-gray-800">
                     Low
                   </option>

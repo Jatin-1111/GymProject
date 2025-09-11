@@ -9,6 +9,25 @@ export const apiUtils = {
             (today.getMonth() < birthDate.getMonth() ||
                 (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate()) ? 1 : 0);
 
+        // Convert sleep hours string to a numeric value
+        const convertSleepHours = (sleepHours) => {
+            if (!sleepHours) return 7.5; // Default
+            if (typeof sleepHours === 'number') return sleepHours;
+
+            // Handle ranges like "7-8", "6-7", etc.
+            if (sleepHours.includes('-')) {
+                const [min, max] = sleepHours.split('-').map(parseFloat);
+                return (min + max) / 2; // Take average
+            }
+
+            // Handle "9+" 
+            if (sleepHours.includes('+')) {
+                return parseFloat(sleepHours.replace('+', '')) + 0.5;
+            }
+
+            return parseFloat(sleepHours) || 7.5;
+        };
+
         return {
             email: formData.email,
             password: formData.password,
@@ -16,13 +35,13 @@ export const apiUtils = {
             name: `${formData.firstName} ${formData.lastName}`.trim(),
             age: age,
             gender: formData.gender, // Should already be capitalized
-            height_cm: parseFloat(formData.height),
-            weight_kg: parseFloat(formData.weight),
-            fitness_goals: formData.fitnessGoals,
-            workouts_per_week: formData.workoutsPerWeek,
-            workout_duration: parseInt(formData.workoutDuration),
-            sleep_hours: formData.sleepHours,
-            stress_level: formData.stressLevel,
+            height_cm: parseFloat(formData.height) || 170, // Provide reasonable default
+            weight_kg: parseFloat(formData.weight) || 70,   // Provide reasonable default
+            fitness_goals: formData.fitnessGoals || "I want to get fit",
+            workouts_per_week: formData.workoutsPerWeek || "3-4",
+            workout_duration: parseInt(formData.workoutDuration) || 60,
+            sleep_hours: convertSleepHours(formData.sleepHours),
+            stress_level: formData.stressLevel || "medium",
             disliked_foods: formData.dislikedFoods || null,
             allergies: formData.allergies || null,
             health_conditions: formData.healthConditions || null,
@@ -38,12 +57,12 @@ export const apiUtils = {
         if (!data.name || data.name.length < 2) errors.push('Name must be at least 2 characters');
         if (!data.age || data.age < 14 || data.age > 99) errors.push('Age must be between 14 and 99');
         if (!data.gender) errors.push('Gender is required');
-        if (!data.height_cm || data.height_cm < 100) errors.push('Height must be greater than 100cm');
-        if (!data.weight_kg || data.weight_kg < 20) errors.push('Weight must be greater than 20kg');
+        if (!data.height_cm || data.height_cm <= 100) errors.push('Height must be greater than 100cm');
+        if (!data.weight_kg || data.weight_kg <= 20) errors.push('Weight must be greater than 20kg');
         if (!data.fitness_goals || data.fitness_goals.length < 5) errors.push('Fitness goals must be at least 5 characters');
         if (!data.workouts_per_week) errors.push('Workouts per week is required');
         if (!data.workout_duration || data.workout_duration <= 0) errors.push('Workout duration must be greater than 0');
-        if (!data.sleep_hours) errors.push('Sleep hours is required');
+        if (!data.sleep_hours || data.sleep_hours <= 0) errors.push('Sleep hours is required and must be positive');
         if (!data.stress_level) errors.push('Stress level is required');
 
         return {
@@ -54,16 +73,39 @@ export const apiUtils = {
 
     // Format API errors for display
     formatApiError: (error) => {
+        console.log("Formatting error:", error); // Debug log
+
         if (typeof error === 'string') return error;
 
+        // Handle Error objects with details property (from API service)
         if (error.details && Array.isArray(error.details)) {
-            return error.details.map(detail => detail.msg || detail.message).join(', ');
+            const formattedErrors = error.details.map(detail => {
+                const field = detail.loc ? detail.loc.join('.') : 'field';
+                const message = detail.msg || detail.message || 'Invalid value';
+                return `${field}: ${message}`;
+            });
+            return formattedErrors.join(', ');
+        }
+
+        // Handle Pydantic validation errors from backend response
+        if (error.error === 'Invalid input' && error.details && Array.isArray(error.details)) {
+            const formattedErrors = error.details.map(detail => {
+                const field = detail.loc ? detail.loc.join('.') : 'field';
+                const message = detail.msg || detail.message || 'Invalid value';
+                return `${field}: ${message}`;
+            });
+            return formattedErrors.join(', ');
         }
 
         if (error.error) return error.error;
         if (error.message) return error.message;
 
-        return 'An unexpected error occurred';
+        // Handle network errors
+        if (error.name === 'TypeError' && error.message.includes('Failed to fetch')) {
+            return 'Unable to connect to server. Please check your internet connection.';
+        }
+
+        return 'An unexpected error occurred. Please try again.';
     },
 
     // Check if API is available

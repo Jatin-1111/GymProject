@@ -97,7 +97,11 @@ class ApiService {
             }
 
             if (!response.ok) {
-                throw new Error(data.error || data.message || `HTTP error! status: ${response.status}`);
+                // For error responses, throw the entire data object to preserve details
+                const error = new Error(data.error || data.message || `HTTP error! status: ${response.status}`);
+                error.details = data.details; // Preserve validation details
+                error.statusCode = response.status;
+                throw error;
             }
 
             return data;
